@@ -29,22 +29,6 @@ while run:
         y -= speed
     if keys[pygame.K_DOWN] and y < 500 - height - speed:
         y += speed
-    if not (isJump):
-
-        if keys[pygame.K_SPACE]:
-            isjump = True
-    else:
-        if jumpCount >= -10:
-
-            y -= 1(jumpCount**2) * 0.5
-
-            if jumpCount < 0:
-                neg = -1
-            y -= (jumpCount**2) * 0.5 * neg
-            jumpCount -= 1
-        else:
-            isJump = False
-            jumpCount = 10
 
     win.fill((0, 0, 0))
     pygame.draw.rect(win, (255, 0, 0), (x, y, width, height))
